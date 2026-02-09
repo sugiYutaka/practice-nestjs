@@ -6,7 +6,6 @@ import { Console } from 'console';
 export class CartService {
   post(postCartProducts: PostCartDto[]): PostedCartDto[] {
     const response: PostedCartDto[] = [];
-    console.log(postCartProducts);
     postCartProducts.forEach((product) => {
       response.push({
         product: {
