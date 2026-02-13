@@ -1,4 +1,4 @@
-import { GetProductDto } from '../../dto/product.dto';
+import { GetProductDto } from '../dto/product.dto';
 import { Product } from '../entities/product';
 import { Price } from '../value-object/price';
 

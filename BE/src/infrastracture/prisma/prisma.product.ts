@@ -1,7 +1,7 @@
 import { Product } from '../../domain/entities/product';
 import { ProductRepository } from '../../domain/repositories/product.repository';
 import { Price } from '../../domain/value-object/price';
-import { GetProductDto } from '../../dto/product.dto';
+import { GetProductDto } from '../../adapter/dto/product.dto';
 
 export class PrismaProduct implements ProductRepository {
   async findAll() {
