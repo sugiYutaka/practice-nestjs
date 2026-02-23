@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ProductController } from './product.controller';
+import { ProductController } from '../../../adapter/controllers/product.controller';
 import { ProductUsecase } from '../../../usecases/product.usecase';
 import { ProductRepository } from '../../../domain/repositories/product.repository';
 import { PrismaProduct } from '../../prisma/prisma.product';

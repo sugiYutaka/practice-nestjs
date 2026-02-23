@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { CartService } from './cart.service';
-import { PostCartDto, PostedCartDto } from '../../../dto/cart.dto';
+import { PostCartDto, PostedCartDto } from '../../../adapter/dto/cart.dto';
 
 @Controller('cart')
 export class CartController {
