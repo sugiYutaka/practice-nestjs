@@ -1,16 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { GetProductDto } from '../adapter/dto/product.dto';
 import { ProductRepository } from '../domain/repositories/product.repository';
-import { ProductMapper } from '../adapter/mappers/product.mapper';
+import { Product } from '../domain/entities/product';
 
 @Injectable()
 export class ProductUsecase {
   constructor(private readonly repository: ProductRepository) {}
 
-  //ここはentityを返すべき、ここでDTOに変換はしない。Controllerでやるべき
-  async get(): Promise<GetProductDto[]> {
-    const data = await this.repository.findAll();
-    const res = data.map((product) => ProductMapper.toResponse(product));
-    return res;
+  async get(): Promise<Product[]> {
+    return await this.repository.findAll();
   }
 }
